@@ -10,6 +10,7 @@ import tensorflow as tf
 import coco
 import flickr30k
 import pedes
+import cub
 
 FLAGS = tf.app.flags.FLAGS
 
@@ -72,6 +73,8 @@ def main(_):
         coco.run()
     elif FLAGS.dataset_name == 'pedes':
         pedes.run()
+    elif FLAGS.dataset_name == 'cub':
+        cub.run()
     else:
         raise ValueError(
             'dataset_name [%s] was not recognized.' % FLAGS.dataset_name)
